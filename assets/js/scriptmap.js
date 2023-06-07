@@ -27,10 +27,11 @@ const options = {
 
     // Construct the API request URL
     const apiKey = googleAPIKey;
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=5000&keyword=${encodeURIComponent(keywords)}&key=${apiKey}`;
 
     // Make the API request using Fetch
-    fetch(url)
+    fetch(proxyUrl + url)
     .then(function(response) {
         if (response.ok) {
         return response.json();
@@ -53,24 +54,3 @@ const options = {
   }
   
   navigator.geolocation.getCurrentPosition(success, error, options);
-
-
-
-// spotifyUrl = 'https://api.spotify.com/v1/recommendations?market=ES&seed_genres=rock&target_valence=.1'
-
-// authorization 
-
-//     fetch(spotifyUrl, {
-//         headers: {
-//             'Authorization': 'Bearer BQCatE...gAbTNi'
-//           }
-//         })
-//     .then(function (response) {
-//         if (response.ok) {
-//             console.log(response);
-//             response.json().then(function (data) {
-//                 console.log(data)
-//              })
-//          }
-//      }
-//     );
