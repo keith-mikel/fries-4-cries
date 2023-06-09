@@ -1,0 +1,37 @@
+* {
+    font-family: 'IBM Plex Mono', monospace;
+}
+body {
+    background-image: url("https://i.imgur.com/MKYpdXx.jpg");
+    background-color: #cccccc;
+}
+header {
+    display: block;
+    width:300px;
+    margin: auto;
+}
+#title-container {
+    text-align: center;
+    margin: 20px;
+}
+#page-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 45px;
+    color: black;
+}
+main {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    text-align:center;
+    width: 450px;
+    margin: auto;
+}
+#btn-container {
+    margin-top: 30px;
+    width: 150px;
+}
+#btn-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+}
