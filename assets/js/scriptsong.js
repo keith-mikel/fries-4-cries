@@ -6,6 +6,7 @@ var userGenre = document.getElementById('genre')
 var userSadRate = document.getElementById('sadRate')
 var submitButton = document.getElementById('submitButton')
 var songSuggestion = document.getElementById('songSuggest')
+var songPic = document.getElementById('songImage')
 
 
 // Function to encode client ID and client secret in Base64
@@ -49,6 +50,8 @@ function getSongSuggestions(spotifyUrl) {
             response.json().then(function (data) {
               console.log(data);
               songSuggestion.textContent = data.tracks[0].name + ' : ' + data.tracks[0].artists[0].name
+              songPic.setAttribute('src', data.tracks[0].album.images[0].url)
+              songPic.removeAttribute('hidden')
 
             });
           } else {

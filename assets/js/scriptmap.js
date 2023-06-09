@@ -1,6 +1,7 @@
 var submitButton = document.getElementById('submitButton')
 var userFood = document.getElementById('foodType')
 var foodSuggest = document.getElementById('foodSuggest')
+var foodPic = document.getElementById('foodImage')
 
 
 var currentLatitude;
