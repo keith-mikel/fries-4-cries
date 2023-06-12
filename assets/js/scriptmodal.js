@@ -1,3 +1,8 @@
+//testing random background script
+var images = ['burger.jpg', 'frnchfry.jpg'];
+document.body.style.backgroundImage = "url('assets/css/images/" + images[Math.floor(Math.random() * images.length)] + "')";
+//
+
 var firstModal = document.getElementById("first-modal");
 var secondModal = document.getElementById("second-modal");
 var startBtn = document.getElementById("start-btn");
