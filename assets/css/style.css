@@ -35,3 +35,21 @@ main {
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
 }
+#first-modal {
+    display: none;
+    position: absolute; 
+    z-index: 1; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+}
+#second-modal {
+    display: none;
+    position: absolute; 
+    z-index: 2; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+}
