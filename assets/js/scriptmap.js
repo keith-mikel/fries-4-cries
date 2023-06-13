@@ -28,6 +28,7 @@ const options = {
     function getFoodSuggestions() {
 
       var googleAPIKey = 'AIzaSyATKPnuuTLSynb2Cq_YP-ZpPHpxUUyFRiQ'
+     
 
       // Input variables
       const latitude = currentLatitude
@@ -51,8 +52,24 @@ const options = {
       .then(function(data) {
           console.log(data);
           foodSuggest.textContent = data.results[0].name + ' Rating: ' + data.results[0].rating
+          var suglatitude = data.results[0].geometry.location.lat
+          var suglongitude = data.results[0].geometry.location.lng
+          var markerCoordinates = `${suglatitude},${suglongitude}`;
+          var markerLabel = data.results[0].name;
 
-          // Process the retrieved data as needed
+          const mappicapiUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${suglatitude},${suglongitude}&zoom=12&size=200x200&key=${googleAPIKey}&markers=label:${markerLabel}|${markerCoordinates}`;
+
+            fetch(mappicapiUrl)
+              .then(response => {
+                if (response.ok) {
+                  foodPic.setAttribute('src', response.url)
+                  foodPic.removeAttribute('hidden')
+                  return response.url;
+                  console.log
+                } else {
+                  throw new Error(`Request failed with status ${response.status}`);
+                }
+              })
       })
       .catch(function(error) {
           console.log('Error:', error.message);
@@ -68,3 +85,7 @@ const options = {
   navigator.geolocation.getCurrentPosition(success, error, options);
 
 submitButton.addEventListener('click', getFoodSuggestions)
+
+ 
+  
+
