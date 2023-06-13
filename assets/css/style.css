@@ -1,9 +1,8 @@
 * {
     font-family: 'IBM Plex Mono', monospace;
-    outline: 2px solid limegreen;
 }
 body {
-    background-image: url("assets\images\burger.jpg");
+    background-image: url("");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -81,4 +80,13 @@ main {
 .dataDisplay section img{
     width:200px;
     height:200px;
+}
+#spinner {
+    width:50%;
+    height:50%;
+}
+.centerme {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }

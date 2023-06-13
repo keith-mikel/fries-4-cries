@@ -1,7 +1,13 @@
 //testing random background script
 var images = ['burger.jpg', 'frnchfry.jpg'];
 document.body.style.backgroundImage = "url('assets/css/images/" + images[Math.floor(Math.random() * images.length)] + "')";
-//
+//random image script for loader
+var spinners = ['spin-01.gif', 'spin-02.gif', "spin-03.gif", "spin-04.gif"];
+function randomizeSpinner () {
+    var spinImg = document.getElementById("spinner");
+    var randomSpin = "assets/css/images/" + spinners[Math.floor(Math.random() * spinners.length)]
+    spinImg.src = randomSpin;
+}
 
 var firstModal = document.getElementById("first-modal");
 var secondModal = document.getElementById("second-modal");
@@ -25,7 +31,7 @@ startBtn.onclick = function() {
   }
   //display loading modal for a couple seconds
   submitBtn.onclick = function() {
-  
+
     firstModal.style.display = "none";
     loadingModal.style.display = "block";
     show();
@@ -33,6 +39,7 @@ startBtn.onclick = function() {
       }
   function show() {
     loadingModal.style.display="block";
+    randomizeSpinner();
     setTimeout("hide()", 3000);  // 3 seconds
   }
 
