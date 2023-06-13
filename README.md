@@ -1,7 +1,6 @@
 # <fries-4-cries>
 
-## Description
-
+# Fries 4 Cries 🍟😭🎧
 
 ## What should I eat when I'm feeling down?
 
