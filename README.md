@@ -12,6 +12,10 @@ Fries 4 Cries is a quick and easy way to find the best place to get your favorit
 ----
 ## User Story
 
+AS A busy professional, working full-time and taking coding classes three nights a week, and with little time to make food and take care of my emotional needs,
+I WANT a website to help me choose the perfect food and song pairing based on my cravings and preferences in music,
+SO THAT I don't have to stress about finding it myself when I'm feeling down.
+
 
 ----
 
@@ -41,3 +45,4 @@ Successfully applying multiple server side API's and geolocation to randomize th
 
 ## Link to Deployed Page
 
+![Fries 4 Cries Website Screenshot](/assets/images/fries-4-cries-screenshot.png)
