@@ -8,13 +8,16 @@ var secondModal = document.getElementById("second-modal");
 var loadingModal = document.getElementById("loading-modal");
 var startBtn = document.getElementById("start-btn");
 var exit = document.getElementById("exit");
+var exit2 = document.getElementById("exit2");
 var submitBtn = document.getElementById("submitButton");
 
 //close modals
 exit.onclick = function() {
     firstModal.style.display = "none";
-    secondModal.style.display = "none";
   }
+exit2.onclick = function() {
+    secondModal.style.display = "none";
+}
 //open first modal
 startBtn.onclick = function() {
     console.log("starting!");

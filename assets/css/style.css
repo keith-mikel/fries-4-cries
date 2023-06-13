@@ -1,5 +1,6 @@
 * {
     font-family: 'IBM Plex Mono', monospace;
+    outline: 2px solid limegreen;
 }
 body {
     background-image: url("assets\images\burger.jpg");
@@ -13,8 +14,14 @@ body {
     top: 5px; 
     left: 5px;
 }
+#results-button:hover {
+    opacity: 0.75;
+}
+button:hover {
+    opacity: 0.5;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 header {
-    display: block;
     width:300px;
     margin: auto;
 }
@@ -59,4 +66,19 @@ main {
 }
 #second-modal {
     z-index: 2; 
+    width: 450px;
+}
+.dataDisplay {
+    display:flex;
+    flex-wrap:wrap;
+    margin:auto;
+}
+.dataDisplay section {
+    flex-direction:column;
+    margin:auto;
+    width:210px;
+}
+.dataDisplay section img{
+    width:200px;
+    height:200px;
 }
