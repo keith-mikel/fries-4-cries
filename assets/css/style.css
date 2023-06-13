@@ -78,8 +78,8 @@ main {
     width:210px;
 }
 .dataDisplay section img{
-    width:200px;
-    height:200px;
+    width:auto;
+    height: 152px;
 }
 #spinner {
     width:50%;
