@@ -89,3 +89,4 @@ submitButton.addEventListener('click', getFoodSuggestions)
  
   
 
+
