@@ -56,6 +56,18 @@ function getSongSuggestions(spotifyUrl) {
               player.setAttribute('src', `https://open.spotify.com/embed/track/${songId}?utm_source=generator`);
               console.log(data.tracks[r].href)
 
+              // Create an object for the song suggestion
+              var songHistoryItem = {
+                name: data.tracks[r].name + ' : ' + data.tracks[r].artists[0].name,
+                url: data.tracks[r].album.images[0].url
+              };
+
+              var songHistory = JSON.parse(localStorage.getItem('songHistory')) || [];
+
+              songHistory.push(songHistoryItem);
+
+              localStorage.setItem('songHistory', JSON.stringify(songHistory));
+
             });
           } else {
             throw new Error('API request failed');
