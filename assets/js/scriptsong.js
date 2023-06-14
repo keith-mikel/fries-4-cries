@@ -48,9 +48,13 @@ function getSongSuggestions(spotifyUrl) {
           if (response.ok) {
             console.log(response);
             response.json().then(function (data) {
-              var songIndex = Math.trunc(data.tracks.length * Math.random());
-              songSuggestion.textContent = data.tracks[songIndex].name + ' : ' + data.tracks[songIndex].artists[0].name
-              var songId = data.tracks[songIndex].id;
+              console.log(data);
+
+              var r = Math.trunc(Math.random() * data.tracks.length);
+              songSuggestion.textContent = data.tracks[r].name + ' : ' + data.tracks[r].artists[0].name
+              songPic.setAttribute('src', data.tracks[r].album.images[0].url)
+              songPic.removeAttribute('hidden')
+              var songId = data.tracks[r].id;
               player.setAttribute('src', `https://open.spotify.com/embed/track/${songId}?utm_source=generator`);
             });
           } else {
