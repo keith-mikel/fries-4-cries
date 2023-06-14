@@ -6,7 +6,7 @@ var userGenre = document.getElementById('genre')
 var submitButton = document.getElementById('submitButton')
 var songSuggestion = document.getElementById('songSuggest')
 var songPic = document.getElementById('songImage')
-
+var player = document.getElementById('spotifyPlayer');
 
 // Function to encode client ID and client secret in Base64
 function getEncodedCredentials(clientId, clientSecret) {
@@ -49,10 +49,14 @@ function getSongSuggestions(spotifyUrl) {
             console.log(response);
             response.json().then(function (data) {
               console.log(data);
+
               var r = Math.floor(Math.random() * data.tracks.length);
               songSuggestion.textContent = data.tracks[r].name + ' : ' + data.tracks[r].artists[0].name
               songPic.setAttribute('src', data.tracks[r].album.images[0].url)
               songPic.removeAttribute('hidden')
+              var songId = data.tracks[r].id;
+              player.setAttribute('src', `https://open.spotify.com/embed/track/${songId}?utm_source=generator`);
+              console.log(data.tracks[r].href)
 
             });
           } else {
@@ -66,3 +70,4 @@ function getSongSuggestions(spotifyUrl) {
 }
 
 submitButton.addEventListener('click' , getSongSuggestions)
+

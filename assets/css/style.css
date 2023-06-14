@@ -2,7 +2,7 @@
     font-family: 'IBM Plex Mono', monospace;
 }
 body {
-    background-image: url("assets\images\burger.jpg");
+    background-image: url("");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -80,6 +80,8 @@ main {
 .dataDisplay section img{
     width:200px;
     height:200px;
+      width:auto;
+    height: 152px;
 }
 
 .radio-container {
@@ -100,3 +102,14 @@ main {
   .submit-container {
     margin-top: 10px;
   }
+
+}
+#spinner {
+    width:50%;
+    height:50%;
+}
+.centerme {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
