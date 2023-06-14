@@ -1,8 +1,8 @@
 //testing random background script
-var images = ['burger.jpg', 'frnchfry.jpg'];
+var images = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg'];
 document.body.style.backgroundImage = "url('assets/css/images/" + images[Math.floor(Math.random() * images.length)] + "')";
 //random image script for loader
-var spinners = ['spin-01.gif', 'spin-02.gif', "spin-03.gif", "spin-04.gif"];
+var spinners = ['spin-01.gif', 'spin-02.gif', "spin-03.gif", "spin-04.gif", "spin-05.gif"];
 function randomizeSpinner () {
     var spinImg = document.getElementById("spinner");
     var randomSpin = "assets/css/images/" + spinners[Math.floor(Math.random() * spinners.length)]
