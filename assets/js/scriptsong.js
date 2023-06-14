@@ -3,7 +3,6 @@ var clientId = '0e188aa06ff14b0a8bac4604dabcbed8';
 var clientSecret = 'efd2188254884ba4978ddbbdadfc2cb4';
 
 var userGenre = document.getElementById('genre')
-var userSadRate = document.getElementById('sadRate')
 var submitButton = document.getElementById('submitButton')
 var songSuggestion = document.getElementById('songSuggest')
 var songPic = document.getElementById('songImage')
@@ -36,6 +35,7 @@ function getSongSuggestions(spotifyUrl) {
       .then(function (data) {
         var accessToken = data.access_token;
         var genre = userGenre.value
+        var userSadRate = document.querySelector('input[name="my-aesthetic-windows-95-radio"]:checked');
         var valence = userSadRate.value
         var spotifyUrl = `https://api.spotify.com/v1/recommendations?market=ES&seed_genres=${genre}&target_valence=${valence}`;
         // Use the access token to make API requests
@@ -49,12 +49,15 @@ function getSongSuggestions(spotifyUrl) {
             console.log(response);
             response.json().then(function (data) {
               console.log(data);
-              songSuggestion.textContent = data.tracks[0].name + ' : ' + data.tracks[0].artists[0].name
-              songPic.setAttribute('src', data.tracks[0].album.images[0].url)
+
+              var r = Math.floor(Math.random() * data.tracks.length);
+              songSuggestion.textContent = data.tracks[r].name + ' : ' + data.tracks[r].artists[0].name
+              songPic.setAttribute('src', data.tracks[r].album.images[0].url)
               songPic.removeAttribute('hidden')
-              var songId = data.tracks[0].id;
+              var songId = data.tracks[r].id;
               player.setAttribute('src', `https://open.spotify.com/embed/track/${songId}?utm_source=generator`);
-              console.log(data.tracks[0].href)
+              console.log(data.tracks[r].href)
+
             });
           } else {
             throw new Error('API request failed');

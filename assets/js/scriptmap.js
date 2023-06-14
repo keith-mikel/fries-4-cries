@@ -51,11 +51,12 @@ const options = {
       })
       .then(function(data) {
           console.log(data);
-          foodSuggest.textContent = data.results[0].name + ' Rating: ' + data.results[0].rating
-          var suglatitude = data.results[0].geometry.location.lat
-          var suglongitude = data.results[0].geometry.location.lng
+          var r = Math.floor(Math.random() * data.results.length);
+          foodSuggest.textContent = data.results[r].name + ' Rating: ' + data.results[r].rating
+          var suglatitude = data.results[r].geometry.location.lat
+          var suglongitude = data.results[r].geometry.location.lng
           var markerCoordinates = `${suglatitude},${suglongitude}`;
-          var markerLabel = data.results[0].name;
+          var markerLabel = data.results[r].name;
 
           const mappicapiUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${suglatitude},${suglongitude}&zoom=12&size=200x200&key=${googleAPIKey}&markers=label:${markerLabel}|${markerCoordinates}`;
 
