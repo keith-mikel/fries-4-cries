@@ -81,3 +81,22 @@ main {
     width:200px;
     height:200px;
 }
+
+.radio-container {
+    display: flex;
+  }
+  
+  .radio-item {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  .radio-item label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .submit-container {
+    margin-top: 10px;
+  }

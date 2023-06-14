@@ -66,5 +66,3 @@ function getSongSuggestions(spotifyUrl) {
 }
 
 submitButton.addEventListener('click' , getSongSuggestions)
-
-
