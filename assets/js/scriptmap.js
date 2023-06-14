@@ -65,12 +65,26 @@ const options = {
                 if (response.ok) {
                   foodPic.setAttribute('src', response.url)
                   foodPic.removeAttribute('hidden')
-                  return response.url;
-                  console.log
-                } else {
+                  return response.url
+                  
+                } 
+                else {
                   throw new Error(`Request failed with status ${response.status}`);
                 }
               })
+               // Create an object for the song suggestion
+              var mapHistoryItem = {
+                name: data.results[r].name + ' Rating: ' + data.results[r].rating,
+                url: mappicapiUrl
+              };
+
+              var mapHistory = JSON.parse(localStorage.getItem('mapHistory')) || [];
+
+              mapHistory.push(mapHistoryItem);
+
+              localStorage.setItem('mapHistory', JSON.stringify(mapHistory));
+                
+              
       })
       .catch(function(error) {
           console.log('Error:', error.message);
