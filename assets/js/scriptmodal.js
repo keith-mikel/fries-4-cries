@@ -16,18 +16,27 @@ var startBtn = document.getElementById("start-btn");
 var exit = document.getElementById("exit");
 var exit2 = document.getElementById("exit2");
 var submitBtn = document.getElementById("submitButton");
+var infoContainer = document.getElementById("info-container");
+
+var modalIsOn = false;
 
 //close modals
 exit.onclick = function() {
     firstModal.style.display = "none";
+    modalIsOn = false;
+    decideShow ()
   }
 exit2.onclick = function() {
     secondModal.style.display = "none";
+    modalIsOn = false;
+    decideShow ()
 }
 //open first modal
 startBtn.onclick = function() {
     console.log("starting!");
+    modalIsOn = true;
     firstModal.style.display = "block";
+    decideShow ();
   }
   //display loading modal for a couple seconds
   submitBtn.onclick = function() {
@@ -50,10 +59,13 @@ startBtn.onclick = function() {
     loadingModal.style.display = "none";
     secondModal.style.display = "block";
   }
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == firstModal) {
-      firstModal.style.display = "none";
-      secondModal.style.display = "none";
-    }
+function decideShow () {
+//hide the info box when modals are displayed
+if (modalIsOn == true) {
+  infoContainer.style.display = "none";
+}
+//bring it back when they arent displayed
+else {
+  infoContainer.style.display = "block";
+}
 }

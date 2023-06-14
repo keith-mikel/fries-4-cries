@@ -1,3 +1,4 @@
+/* Body Stuff */
 * {
     font-family: 'IBM Plex Mono', monospace;
 }
@@ -8,6 +9,8 @@ body {
     background-position: 0 0;
     background-size: cover;
 }
+
+/* Top Left Result Button */
 #results-button {
     position: fixed; 
     top: 5px; 
@@ -20,6 +23,8 @@ button:hover {
     opacity: 0.5;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+/*Header*/
 header {
     width:300px;
     margin: auto;
@@ -33,6 +38,8 @@ header {
     font-size: 45px;
     color: black;
 }
+
+/*Main Area*/
 main {
     display: flex;
     flex-wrap:wrap;
@@ -52,6 +59,8 @@ main {
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
 }
+
+/*Modals*/
 #first-modal, #second-modal, #loading-modal {
     display: none;
     position: absolute; 
@@ -67,21 +76,29 @@ main {
     z-index: 2; 
     width: 450px;
 }
+
+/*Results Display Modal*/
 .dataDisplay {
+    display:block;
+}
+.dataDisplay section {
     display:flex;
     flex-wrap:wrap;
     margin:auto;
 }
-.dataDisplay section {
-    flex-direction:column;
+#foodSuggest, #songSuggest {
+    flex-direction: row;
     margin:auto;
-    width:210px;
+    width:50%;
+    padding-bottom:0px;
 }
-.dataDisplay section img{
-    width:200px;
-    height:200px;
-      width:auto;
-    height: 152px;
+#image-container {
+    flex-direction:row;
+    margin:auto;
+    width:100%;
+}
+#image-result {
+    width:50%;
 }
 
 .radio-container {
@@ -105,11 +122,32 @@ main {
 
 
 #spinner {
-    width:50%;
-    height:50%;
+    width:80%;
+    height:80%;
 }
 .centerme {
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+label img {
+    width:25px;
+    height:25px;
+}
+#info-container {
+    display:flex;
+}
+footer {
+    color: white;
+    position: fixed; 
+    bottom: 0px; 
+    left: 0px;
+    width:100%;
+    text-align:center;
+    opacity: 0.40;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+#group-name{
+    font-family: 'Press Start 2P', cursive;
 }
