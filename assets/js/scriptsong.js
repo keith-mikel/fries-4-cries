@@ -48,11 +48,10 @@ function getSongSuggestions(spotifyUrl) {
           if (response.ok) {
             console.log(response);
             response.json().then(function (data) {
-              console.log(data);
-              songSuggestion.textContent = data.tracks[0].name + ' : ' + data.tracks[0].artists[0].name
-              var songId = data.tracks[0].id;
+              var songIndex = Math.trunc(data.tracks.length * Math.random());
+              songSuggestion.textContent = data.tracks[songIndex].name + ' : ' + data.tracks[songIndex].artists[0].name
+              var songId = data.tracks[songIndex].id;
               player.setAttribute('src', `https://open.spotify.com/embed/track/${songId}?utm_source=generator`);
-              console.log(data.tracks[0].href)
             });
           } else {
             throw new Error('API request failed');
