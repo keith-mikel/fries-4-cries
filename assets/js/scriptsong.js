@@ -52,8 +52,6 @@ function getSongSuggestions(spotifyUrl) {
 
               var r = Math.floor(Math.random() * data.tracks.length);
               songSuggestion.textContent = data.tracks[r].name + ' : ' + data.tracks[r].artists[0].name
-              songPic.setAttribute('src', data.tracks[r].album.images[0].url)
-              songPic.removeAttribute('hidden')
               var songId = data.tracks[r].id;
               player.setAttribute('src', `https://open.spotify.com/embed/track/${songId}?utm_source=generator`);
               console.log(data.tracks[r].href)

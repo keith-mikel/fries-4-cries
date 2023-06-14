@@ -58,7 +58,7 @@ const options = {
           var markerCoordinates = `${suglatitude},${suglongitude}`;
           var markerLabel = data.results[r].name;
 
-          const mappicapiUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${suglatitude},${suglongitude}&zoom=12&size=200x200&key=${googleAPIKey}&markers=label:${markerLabel}|${markerCoordinates}`;
+          const mappicapiUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${suglatitude},${suglongitude}&zoom=12&size=210x156&key=${googleAPIKey}&markers=label:${markerLabel}|${markerCoordinates}`;
 
             fetch(mappicapiUrl)
               .then(response => {
