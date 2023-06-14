@@ -23,7 +23,7 @@
         <span id="page-title" class="aesthetic-effect-text-glitch" data-glitch="FRIES 4 CRIES">Fries 4 Cries</span>
         </div>
     </header>
-    <main>
+    <main id="info-container">
     <div class="aesthetic-windows-95-modal">
         <section class="aesthetic-windows-95-modal-title-bar">
             <div class="aesthetic-windows-95-modal-title-bar-text">
@@ -77,27 +77,27 @@
         <label for="sadRate"> Enter a Sad Rating</label><br>
         <div class="radio-container">
           <div class="radio-item">
-          <label class="radioLabel" for="sadRate1">D:</label>
+          <label class="radioLabel" for="sadRate1"><img src="assets\css\images\em-05.png"></label>
           <input id="sadRate1" value=".1" type="radio" name="my-aesthetic-windows-95-radio" />
           <span class="aesthetic-windows-95-checkmark"></span>
           </div>
           <div class="radio-item">
-          <label class="radioLabel"  for="sadRate2"> :'[</label>
+          <label class="radioLabel"  for="sadRate2"><img src="assets\css\images\em-04.png"></label>
           <input id="sadRate2" value=".2" type="radio" name="my-aesthetic-windows-95-radio" />
           <span class="aesthetic-windows-95-checkmark"></span>
           </div>
           <div class="radio-item">
-          <label class="radioLabel"  for="sadRate3"> :[ </label>
+          <label class="radioLabel"  for="sadRate3"><img src="assets\css\images\em-03.png"></label>
           <input id="sadRate3" value=".3" type="radio" name="my-aesthetic-windows-95-radio" />
           <span class="aesthetic-windows-95-checkmark"></span>
           </div>
           <div class="radio-item">
-          <label class="radioLabel"  for="sadRate4"> :\</label>
+          <label class="radioLabel"  for="sadRate4"><img src="assets\css\images\em-02.png"></label>
           <input id="sadRate4" value=".4" type="radio" name="my-aesthetic-windows-95-radio" />
           <span class="aesthetic-windows-95-checkmark"></span>
           </div>
           <div class="radio-item">
-          <label class="radioLabel"  for="sadRate5"> :|</label>
+          <label class="radioLabel"  for="sadRate5"><img src="assets\css\images\em-01.png"></label>
           <input id="sadRate5" value=".5" type="radio" name="my-aesthetic-windows-95-radio" />
           <span class="aesthetic-windows-95-checkmark"></span><br>
           </div>
@@ -140,15 +140,15 @@
     <div>
         
     <div class="dataDisplay">
-      <section id="foodContainer">
+      <section id="title-container">
         <div id="foodSuggest"></div>
-        <div class="aesthetic-effect-crt">
+        <div id="songSuggest"></div>
+      </section>
+      <section id="image-container">
+        <div id="image-result" class="aesthetic-effect-crt">
           <img id="foodImage" src="">
         </div>
-      </section>
-      <section id="songContainer">
-        <div id="songSuggest"></div>
-        <div class="aesthetic-effect-crt">
+        <div id="image-result" class="aesthetic-effect-crt">
           <iframe id="spotifyPlayer" style="border-radius:12px" src="" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </section>
@@ -183,12 +183,10 @@
   <!-- Content -->
   <div class="aesthetic-windows-95-modal-content">
 
-    <div>
+    <div class="centerme">
         
       <img id="spinner" src="">
-      <div class="aesthetic-windows-95-loader">
-        <div></div>
-        <div></div>
+      <div class="aesthetic-windows-95-boot-loader">
         <div></div>
       </div>
 
@@ -196,6 +194,10 @@
 
   </div>
 </div> 
+
+<footer class="aesthetic-windows-95-container">
+<img src="assets\css\images\dontask.gif" width="30px" height="30px"> // Made with <img src="assets\css\images\heart.png" width="15px" height="15px"> by <span id="group-name" class="aesthetic-font-modifier-gradient-arizona">Something Cool Here</span>
+</footer>
 
 </body>
 <script src="./assets/js/scriptmodal.js"></script>
