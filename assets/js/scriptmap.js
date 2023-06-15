@@ -101,6 +101,10 @@ const options = {
 
 submitButton.addEventListener('click', getFoodSuggestions)
 
+if (window.confirm('Click OK to be redirected to activate proxy')) {
+  window.open('https://cors-anywhere.herokuapp.com/corsdemo', '_blank');
+}
+
  
   
 
