@@ -32,7 +32,7 @@ these suggestions will be stored for future crys in the results page.
 
 ## Installation
 
-Use SSH github link in order to install this project ssh to install Weather App.
+Use SSH github link in order to install this project ssh to install Fries-for-Cries App.
 
 ```bash
 clone git@github.com:keith-mikel/fries-4-cries.git
