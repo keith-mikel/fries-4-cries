@@ -18,6 +18,28 @@ SO THAT I don't have to stress about finding it myself when I'm feeling down.
 
 ----
 
+## Usage
+
+**if it is the first time using the application, select the link at the bottom of the page to activate the proxy, this will allow the google maps api to run properly**
+
+on the top left of the screen accept the location prompt so that the page can make food suggestions based on your current location
+
+select the "help me!" button, enter your preferences, genre of the music you would like, the type of food you would like to have suggested, and the sad rating, going from saddest on the left and less sad on the right.
+
+this will fetch suggestions based on your current location, and give you a song suggestion
+
+these suggestions will be stored for future crys in the results page.
+
+## Installation
+
+Use SSH github link in order to install this project ssh to install Weather App.
+
+```bash
+clone git@github.com:keith-mikel/fries-4-cries.git
+```
+
+----
+
 ## Technology Used
 * HTML5
 * CSS
@@ -42,6 +64,15 @@ Successfully applying multiple server side API's and geolocation to randomize th
 
 -----
 
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+----
+
 ## Link to Deployed Page
+
+https://keith-mikel.github.io/fries-4-cries/
 
 ![Fries 4 Cries Website Screenshot](/assets/images/fries-4-cries-screenshot.png)
