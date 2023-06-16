@@ -1,6 +1,7 @@
 /* Body Stuff */
 * {
     font-family: 'IBM Plex Mono', monospace;
+    cursor: url("assets\css\images\arrow.cur");
 }
 body {
     background-image: url("");
@@ -136,6 +137,9 @@ label img {
 }
 #info-container {
     display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 footer {
     color: white;
