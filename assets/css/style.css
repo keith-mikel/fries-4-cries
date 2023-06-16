@@ -1,13 +1,11 @@
 /* Body Stuff */
 * {
     font-family: 'IBM Plex Mono', monospace;
-    cursor: url("assets\css\images\arrow.cur");
 }
 body {
     background-image: url("");
     background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-repeat: repeat;
     background-size: cover;
 }
 
@@ -53,6 +51,8 @@ main {
     width:100%;
 }
 #btn-container {
+    display:flex;
+    margin:auto;
     margin-top: 30px;
     width: 150px;
 }

@@ -10,11 +10,11 @@ function loadHistory() {
     var songName = item.name;
     var songUrl = item.url;
 
-    // Create a title and append it
-    var resultTitle = document.createElement('h1');
-    resultTitle.classList.add('result-title');
-    resultTitle.textContent = "--------";
-    songHistoryContainer.appendChild(resultTitle);
+        //create a title and append it
+          var resultTitle = document.createElement('h1');
+          resultTitle.classList.add('aesthetic-font-modifier-outline-black');
+          resultTitle.textContent = "--------";
+          songHistoryContainer.appendChild(resultTitle);
 
 
     // Create the boxes around the item
@@ -47,12 +47,13 @@ function loadHistory() {
     var mapName = item.name;
     var mapUrl = item.url;
 
-    // Create a title and append it
-    var resultTitle = document.createElement('h1');
-    resultTitle.classList.add('result-title');
-    resultTitle.textContent = "Result " + resultNum;
-    newResultNum();
-    mapHistoryContainer.appendChild(resultTitle);
+        
+        //create a title and append it
+          var resultTitle = document.createElement('h1');
+          resultTitle.classList.add('aesthetic-font-modifier-outline-black');
+          resultTitle.textContent = "Result " + resultNum;
+          newResultNum();
+          mapHistoryContainer.appendChild(resultTitle);
 
     // Create the boxes around the item
     var mapContainer = document.createElement('div');
