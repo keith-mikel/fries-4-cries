@@ -66,6 +66,6 @@ if (modalIsOn == true) {
 }
 //bring it back when they arent displayed
 else {
-  infoContainer.style.display = "block";
+  infoContainer.style.display = "flex";
 }
 }
