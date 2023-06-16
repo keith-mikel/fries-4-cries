@@ -12,7 +12,7 @@ function loadHistory() {
 
         //create a title and append it
           var resultTitle = document.createElement('h1');
-          resultTitle.classList.add('result-title');
+          resultTitle.classList.add('aesthetic-font-modifier-outline-black');
           resultTitle.textContent = "--------";
           songHistoryContainer.appendChild(resultTitle);
 
@@ -50,7 +50,7 @@ function loadHistory() {
         
         //create a title and append it
           var resultTitle = document.createElement('h1');
-          resultTitle.classList.add('result-title');
+          resultTitle.classList.add('aesthetic-font-modifier-outline-black');
           resultTitle.textContent = "Result " + resultNum;
           newResultNum();
           mapHistoryContainer.appendChild(resultTitle);

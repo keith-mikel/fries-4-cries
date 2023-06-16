@@ -6,7 +6,7 @@
 body {
     background-image: url("");
     background-color: #cccccc;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: 0 0;
     background-size: cover;
 }

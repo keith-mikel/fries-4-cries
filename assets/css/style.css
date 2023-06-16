@@ -2,14 +2,10 @@
 * {
     font-family: 'IBM Plex Mono', monospace;
 }
-html { 
-    cursor: url("images\arrow.png"), pointer;
-}
 body {
     background-image: url("");
     background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-repeat: repeat;
     background-size: cover;
 }
 
