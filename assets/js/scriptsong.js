@@ -37,7 +37,7 @@ function getSongSuggestions(spotifyUrl) {
         var genre = userGenre.value
         var userSadRate = document.querySelector('input[name="my-aesthetic-windows-95-radio"]:checked');
         var valence = userSadRate.value
-        var spotifyUrl = `https://api.spotify.com/v1/recommendations?market=ES&seed_genres=${genre}&target_valence=${valence}`;
+        var spotifyUrl = `https://api.spotify.com/v1/recommendations?market=ES&seed_genres=${genre.toLowerCase()}&target_valence=${valence}`;
         // Use the access token to make API requests
         fetch(spotifyUrl, {
           headers: {
