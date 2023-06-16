@@ -84,3 +84,7 @@ p {
     margin: auto;
     vertical-align: middle;
 }
+h1 {
+    color:white;
+    font-family: 'Press Start 2P', cursive;
+}
