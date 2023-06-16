@@ -1,6 +1,3 @@
-*{
-    outline: 2px solid limegreen;
-}
 /* Body Stuff */
 * {
     font-family: 'IBM Plex Mono', monospace;
@@ -75,6 +72,5 @@ main {
     height: 150px;
 }
 #result-title{
-    color:white;
     font-family: 'Press Start 2P', cursive;
 }

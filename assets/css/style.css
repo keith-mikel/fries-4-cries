@@ -1,7 +1,9 @@
 /* Body Stuff */
 * {
     font-family: 'IBM Plex Mono', monospace;
-    cursor: url("assets\css\images\arrow.cur");
+}
+html { 
+    cursor: url("images\arrow.png"), pointer;
 }
 body {
     background-image: url("");
@@ -53,6 +55,8 @@ main {
     width:100%;
 }
 #btn-container {
+    display:flex;
+    margin:auto;
     margin-top: 30px;
     width: 150px;
 }
